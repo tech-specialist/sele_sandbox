@@ -8,9 +8,9 @@ import static com.codeborne.selenide.Selectors.byTagAndText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class ProjectPage {
-    final SelenideElement createBtn = $x("//*[text()='Create new project']");
-    final SelenideElement createBtnV = $x("//*[text()='Create new project']//../..");
-    final ElementsCollection projectLinks = $$x("//tr//a");
+    private final SelenideElement createBtn = $x("//*[text()='Create new project']");
+    private final SelenideElement createBtnV = $x("//*[text()='Create new project']//../..");
+    private final ElementsCollection projectLinks = $$x("//tr//a");
 
     public ProjectPage waitOpen() {
         createBtn.should(exist).shouldBe(visible, Duration.ofSeconds(10));
