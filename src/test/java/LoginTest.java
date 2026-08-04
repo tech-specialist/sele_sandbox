@@ -1,0 +1,11 @@
+import org.testng.annotations.Test;
+
+public class LoginTest extends BaseTest {
+    @Test
+    public void projectIsOpen() {
+        loginPage.openPage();
+        loginPage.login();
+        projectPage.waitOpen();
+        projectPage.checkBtnColor();
+    }
+}
